@@ -1,5 +1,5 @@
 # Project name
-PROJECT=GLCD
+PROJECT=LED
 
 # Directory definitions
 GLCD_SRC_DIR=./GLCD
@@ -89,7 +89,7 @@ VECTOR_SRC=$(wildcard $(ARM_CMSIS_STARTUP_ASM_DIR)/startup_stm32f10x_ld.s)
 
 CM3_SRC=$(ARM_CMSIS_DEVICE_DIR)/system_stm32f10x.c
 
-SRC=USER/main.c USER/newlib_stubs.c $(CM3_SRC) $(VECTOR_SRC) $(SYSTICK_SRC) $(ST_LIB_SRC) $(GLCD_SRC)
+SRC=USER/main.c USER/newlib_stubs.c $(CM3_SRC) $(VECTOR_SRC) $(SYSTICK_SRC) $(ST_LIB_SRC)
 
 OBJS = $(addprefix $(OUTDIR)/, $(addsuffix .o, $(ALLSRCBASE)))
 
